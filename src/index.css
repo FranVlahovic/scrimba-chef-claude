@@ -2,14 +2,40 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Inter, sans-serif;
 }
 
 :root {
---primary-color: --secondary-color: ;
+--primary-color: #141413;
+--secondary-color: ;
 }
 
 img {
 max-width: 100%;
 display: block;
 height: auto;
+}
+
+/**
+header box shadow code:
+box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+*/
+body {
+  max-width: 720px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  padding: 1.8em;
+  background-color: white;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
 }
