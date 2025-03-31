@@ -9,18 +9,16 @@ export default function Main(){
         );
     })
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        const formData = new FormData(e.currentTarget);
+    function handleSubmit(formData) {
         const newIngredient = formData.get("ingredient");
         setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
     }
 
     return(
         <main>
-            <form className="add-ingredient-form" onSubmit={handleSubmit}>
+            <form className="add-ingredient-form" action={handleSubmit}>
                 <input 
-                    aria-label="Add ingredient" 
+                    aria-label="Add ingredient"
                     type="text" 
                     placeholder="e.g. oregano"
                     name="ingredient"
